@@ -16,7 +16,7 @@
    Netty uses callbacks internally when handling events; when a callback is triggered the event can be handled by an implementation of interface ChannelHandler.
 
    For example:
-   #+BEGIN_SOURCE java
+   #+BEGIN_SRC java
    public class ConnectHandler extends ChannelInboundHandlerAdapter {
 
      @Override
@@ -25,7 +25,7 @@
      }
 
    }
-   #+END_SOURCE
+   #+END_SRC
 
 ** Futures
 
@@ -36,7 +36,7 @@
    implementations allow you only to check manually whether the operation has completed or to block until it does.
    This is quite cumbersome, so Netty provides its own implementation, ChannelFuture , for use when an asynchronous operation is executed.
 
-    #+BEGIN_SOURCE java
+    #+BEGIN_SRC java
     Channel channel = ...;
     // Does not block
     ChannelFuture future = channel.connect(new InetSocketAddress("192.168.0.1", 25));
@@ -56,7 +56,7 @@
         }
       }
     });
-    #+END_SOURCE
+    #+END_SRC
 
 ** Event Handlers
 
@@ -66,6 +66,6 @@
    is a good example of an event-driven paradigm translating directly into application
    building blocks. Netty’s ChannelHandler provides the basic abstraction for handlers.
 
-   #+BEGIN_SOURCE java
+   #+BEGIN_SRC java
 
-   #+END_SOURCE
+   #+END_SRC
